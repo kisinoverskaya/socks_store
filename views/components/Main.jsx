@@ -19,7 +19,7 @@ const Main = ({ findUser }) => {
           )}
           {findUser ? <a href="/">Личный кабинет</a> : null}
           {findUser ? (
-            <a href="/logout">Выйти</a>
+            <a href="/auth">Выйти</a>
           ) : (
             <a href="/" className="logIn">
               Войти

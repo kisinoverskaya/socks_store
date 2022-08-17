@@ -36,7 +36,7 @@ app.use(express.json());
 // routers
 app.use("/", indexRouter);
 app.use("/auth/", authRouter);
-app.use("/logout", logoutRouter);
+// app.use("/logout", logoutRouter);
 
 app.listen(PORT, (req, res) => {
   console.log(chalk.bgCyan(` Server has been start on port: ${PORT} `));
