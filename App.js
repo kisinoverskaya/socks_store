@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const indexRouter = require("./routes/indexRouter");
 const ssr = require("./middleware/ssr");
 const authRouter = require("./routes/authRouter");
+const cartRouter = require('./routes/cartRouter');
 const session = require("express-session");
 
 const logoutRouter = require("./routes/logoutRouter");
@@ -35,7 +36,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // routers
 app.use("/", indexRouter);
-app.use("/auth/", authRouter);
+app.use("/auth", authRouter);
+app.use("/cart", cartRouter);
 // app.use("/logout", logoutRouter);
 
 app.listen(PORT, (req, res) => {

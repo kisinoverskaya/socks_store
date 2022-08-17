@@ -11,7 +11,7 @@ const Main = ({ findUser }) => {
         {findUser && <h2>Привет {findUser.name}</h2>}
         <nav>
           <a href="/">Главная</a>
-          <a href="/">Новинки</a>
+          <a href="/cart/items">Корзина</a>
           {findUser ? null : (
             <a href="/" className="register">
               Регистрация
