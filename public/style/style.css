@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font: normal 18px 'Open Sans', sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+main {
+  min-height: 100vh;
+}
+
+header {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font: normal 4em 'Playfair Display SC', serif;
+  text-align: center;
+}
+
+nav {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+}
+
+nav a {
+  flex-grow: 1;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: scaleX(0);
+  background: #333;
+  transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+}
+
+nav a:hover::after {
+  transform: scaleX(1)
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.registration,
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 1px 2px 12px black;
+  display: none;
+  background: white;
+}
+
+.visible {
+  display: block;
+}
+
+.greetings {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
