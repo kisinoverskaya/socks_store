@@ -11,7 +11,7 @@ const Main = ({ findUser }) => {
         {findUser && <h2>Привет {findUser.name}</h2>}
         <nav>
           <a href="/">Главная</a>
-          <a href="/">Новинки</a>
+          <a href="/cart/items">Корзина</a>
           {findUser ? null : (
             <a href="/" className="register">
               Регистрация
@@ -19,7 +19,7 @@ const Main = ({ findUser }) => {
           )}
           {findUser ? <a href="/">Личный кабинет</a> : null}
           {findUser ? (
-            <a href="/logout">Выйти</a>
+            <a href="/auth">Выйти</a>
           ) : (
             <a href="/" className="logIn">
               Войти

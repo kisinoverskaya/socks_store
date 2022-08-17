@@ -97,3 +97,13 @@ input {
 h2 {
   text-align: center;
 }
+
+.mainCart {
+  display: flex;
+  padding-top: 100px;
+  
+}
+
+.items{
+  padding-left: 500px;
+}
