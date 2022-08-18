@@ -1,17 +1,21 @@
 const wraper = document.querySelector(".wraper");
 
 wraper.addEventListener("click", (e) => {
+  // тут ищу src
+  const sockSrc = document.querySelector(".sock-uzor-src");
   const sockImg = document.querySelector(".sock-img");
-  const sockImgSrc = document.querySelector(".sock-img-src");
+  const srcItemBlock = document.querySelector(".src-item-block");
   if (e.target.className === "color-item") {
     sockImg.style.backgroundColor = e.target.dataset.color;
   }
   if (e.target.className === "src-item-block") {
     sockImg.style.backgroundImage = `url('../img/${e.target.dataset.src}.png')`;
+    sockImg.style.backgroundImage = `url('../img/${e.target.dataset.src}.png')`;
   }
   if (e.target.className === "btn-buy") {
-    console.log("тут будет фетч");
-    console.log(sockImg.dataset.src);
+    // console.log("тут будет фетч");
+    console.log(sockSrc.dataset.src);
+    console.log(srcItemBlock.dataset.src);
     const body = JSON.stringify({
       color: sockImg.style.backgroundColor,
     });
