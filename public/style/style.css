@@ -90,20 +90,17 @@ input {
   display: block;
 }
 
-.greetings {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
-
-.mainCart {
+.order-block {
+  border: 1px solid black;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
   display: flex;
-  padding-top: 100px;
-  
 }
 
-.items{
-  padding-left: 500px;
+.left-block,
+.right-block {
+  width: 50%;
+  border: 1px solid black;
+  height: 100%;
 }

@@ -1,4 +1,5 @@
 const React = require("react");
+const Nav = require("./components/Nav");
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
         <script defer src="/js/index.js"></script>
       </head>
       <body>
+        <Nav />
         {children}
         <hr />
       </body>
