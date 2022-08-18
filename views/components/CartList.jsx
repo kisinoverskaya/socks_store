@@ -10,7 +10,7 @@ module.exports = function CartList({ sockList, findUser }) {
         <div className="order-block">
           <ul className="socksList">
             {sockList.map((el) => (
-              <li>
+              <li data-id={el.id}>
                 {el.color} <span className="destroy">X</span>{" "}
               </li>
             ))}

@@ -1,6 +1,5 @@
 document.querySelectorAll(".wraper").forEach((el) => {
   el.addEventListener("click", async (e) => {
-    console.log("123");
     const sockSrc = document.querySelector(".sock-uzor-src");
     const sockImg = document.querySelector(".sock-img");
     const srcItemBlock = document.querySelector(".src-item-block");
@@ -12,13 +11,10 @@ document.querySelectorAll(".wraper").forEach((el) => {
       sockImg.style.backgroundImage = `url('../img/${e.target.dataset.src}.png')`;
       console.log(sockImg.style.backgroundImage);
     }
+
     if (e.target.className === "btn-buy") {
       console.log(sockSrc.dataset.src);
       console.log(srcItemBlock.dataset.src);
-      const body = JSON.stringify({
-        color: sockImg.style.backgroundColor,
-      });
-      console.log(body);
 
       const response = await fetch("/gen", {
         method: "post",
@@ -37,22 +33,23 @@ document.querySelectorAll(".wraper").forEach((el) => {
 });
 
 // find modal
-const register = document.querySelector(".register");
-register.addEventListener("click", (e) => {
-  e.preventDefault();
-  const modal = document.querySelector(".registration");
-  modal.classList.toggle("visible");
+document.querySelectorAll(".register").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const modal = document.querySelector(".registration");
+    modal.classList.toggle("visible");
+  });
+
+  // find login
+  const logIn = document.querySelector(".logIn");
+  logIn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const login = document.querySelector(".login");
+    login.classList.toggle("visible");
+  });
 });
 
-// find login
-const logIn = document.querySelector(".logIn");
-logIn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const login = document.querySelector(".login");
-  login.classList.toggle("visible");
-});
 // register
-
 reg.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -70,9 +67,7 @@ reg.addEventListener("submit", async (e) => {
   const myRes = await response.json();
   if (myRes.message === "Создан новый чел") {
     window.location.href = "/";
-  } else {
   }
-  // location.reload(); reload page // new url
 });
 
 // find login
