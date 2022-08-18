@@ -2,6 +2,7 @@ const React = require("react");
 const Layout = require("../Layout");
 const Login = require("./Login");
 const Registration = require("./Registration");
+const SocksGenerator = require("./SocksGenerator");
 
 const Main = ({ findUser }) => {
   return (
@@ -17,7 +18,7 @@ const Main = ({ findUser }) => {
               Регистрация
             </a>
           )}
-          {findUser ? <a href="/">Личный кабинет</a> : null}
+          {findUser ? <a href="/">Избранное</a> : null}
           {findUser ? (
             <a href="/auth">Выйти</a>
           ) : (
@@ -33,6 +34,8 @@ const Main = ({ findUser }) => {
           <Login />
         </div>
       </header>
+      <hr />
+      <SocksGenerator />
     </Layout>
   );
 };
