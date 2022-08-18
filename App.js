@@ -12,6 +12,7 @@ const deleteRouter = require("./routes/deleteRouter");
 const logoutRouter = require("./routes/logoutRouter");
 const genRouter = require("./routes/genRouter");
 const FileStore = require("session-file-store")(session);
+const favRouter = require('./routes/favRouter');
 
 const PORT = 3000;
 const app = express();
