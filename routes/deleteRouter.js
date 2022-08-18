@@ -4,7 +4,7 @@ const { Basket } = require("../db/models");
 
 deleteRouter.delete("/:id", async (req, res) => {
   try {
-    const res = await Basket.destroy({
+    const result = await Basket.destroy({
       where: {
         id: Number(req.params.id),
       },

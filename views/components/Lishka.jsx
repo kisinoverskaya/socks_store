@@ -3,7 +3,8 @@ const React = require("react");
 const Lishka = ({ el }) => {
   return (
     <li data-id={el.id}>
-      {el.color} <span className="destroy">X</span>{" "}
+      <b>{el.title}</b>, цвет <b>{el.color}</b>
+      <span className="destroy">X</span>{" "}
     </li>
   );
 };

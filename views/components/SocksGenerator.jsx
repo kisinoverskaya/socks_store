@@ -5,7 +5,11 @@ const SocksGenerator = () => {
     <div className="wraper">
       <div className="heart"></div>
       <div className="heart red"></div>
-      <h2 className="wrapper-title">Название носка</h2>
+      <input
+        type="text"
+        className="sock-title"
+        placeholder="Придумайте название носку"
+      />
       <div className="sock">
         <div className="sock-img">
           <div className="sock-img-src"></div>
@@ -40,6 +44,7 @@ const SocksGenerator = () => {
         </div>
         <div className="wrapper-uzor-description"></div>
       </div>
+      <h3>500</h3>
       <button className="btn-buy">Купить</button>
     </div>
   );

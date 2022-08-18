@@ -16,10 +16,12 @@ module.exports = function CartList({ sockList, findUser }) {
           </ul>
         </div>
         <h2>
-          Итого:
-          {sockList.reduce((acc, el) => {
-            return acc + el.price;
-          }, 0)}
+          Итого:{" "}
+          <span className="price">
+            {sockList.reduce((acc, el) => {
+              return acc + el.price;
+            }, 0)}
+          </span>
         </h2>
         <script defer src="/js/basket.js"></script>
       </div>
