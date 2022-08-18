@@ -1,5 +1,17 @@
 document.querySelectorAll(".socksList").forEach((el) => {
   el.addEventListener("click", async (e) => {
+    // тут ищу счетчик в корзине
+    const accumulator = document.querySelectorAll(".accumulator");
+    // plus
+    const plus = document.querySelectorAll(".plus");
+    const minus = document.querySelectorAll(".minus");
+
+    if (e.target.className === "plus") {
+      let value =
+        e.target.closest("li").childNodes[3].childNodes[1].textContent;
+      value = "2";
+    }
+
     if (e.target.className === "destroy") {
       const li = e.target.closest("li");
       const id = li.dataset.id;
