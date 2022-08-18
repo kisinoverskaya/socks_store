@@ -6,7 +6,11 @@ const Nav = ({ findUser }) => {
   return (
     <header>
       <h1>socks shop</h1>
-      {findUser && <h2>Привет {findUser.name}</h2>}
+      {findUser && (
+        <div className="greetingsModal">
+          <h2>Привет {findUser.name}</h2>
+        </div>
+      )}
       <nav>
         <a href="/">Главная</a>
         <a href="/cart/items">Корзина</a>

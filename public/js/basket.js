@@ -33,7 +33,7 @@ const btnBuy = document.querySelector(".btnBuy");
 btnBuy.addEventListener("click", async () => {
   const modalPay = document.querySelector(".modal-pay");
   console.log(modalPay);
-  // modalPay.classList.toggle("visible-pay");
+  modalPay.classList.toggle("visible-pay");
 
   const url = "mailto:vadimir29@gmail.com";
 

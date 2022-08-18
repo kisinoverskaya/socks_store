@@ -7,7 +7,14 @@ const SocksGenerator = require("./SocksGenerator");
 const Main = ({ findUser }) => {
   return (
     <Layout findUser={findUser}>
-      <SocksGenerator />
+      {findUser ? (
+        <SocksGenerator />
+      ) : (
+        <div className="needRegister">
+          Для приобретения высококачественных носков вам необходимо
+          зарегистрироваться
+        </div>
+      )}
     </Layout>
   );
 };

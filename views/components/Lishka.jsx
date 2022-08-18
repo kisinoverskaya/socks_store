@@ -1,7 +1,7 @@
 const React = require("react");
 
 const Lishka = ({ el }) => {
-  const obj = {
+  const picture = {
     src1: "котейка",
     src2: "бэтмен",
     src3: "хагги-ваги",
@@ -14,13 +14,12 @@ const Lishka = ({ el }) => {
     src10: "деньгопад",
   };
 
+  const colors = {};
+
   return (
     <li data-id={el.id}>
       <div>
-        <b>{el.title}</b>, цвет{" "}
-        <b>
-          {el.color}, с картинкой {obj[el.src]}
-        </b>
+        <b>{el.title}</b>, цвет {el.color}, с картинкой <b>{picture[el.src]}</b>
       </div>
       <div className="controls">
         <div className="counter">

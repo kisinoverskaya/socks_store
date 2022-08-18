@@ -127,11 +127,6 @@ li {
   transform: scale(0.8);
 }
 
-.price-buy {
-  justify-content: space-between;
-  padding: 5px;
-}
-
 .basket-controls {
   width: 15%;
   margin: 5px auto;
@@ -164,6 +159,7 @@ li {
 }
 
 .modal-pay {
+  display: none;
   width: 50%;
   height: 500px;
   border: 1px solid black;
@@ -171,11 +167,10 @@ li {
   right: 25%;
   z-index: 1;
   background: white;
-  opacity: 0;
 }
 
 .visible-pay {
-  opacity: 1;
+  display: block;
 }
 
 .counter {
@@ -213,4 +208,25 @@ li {
 .total-price {
   width: 100%;
   text-align: center;
+}
+
+.needRegister {
+  width: 40%;
+  height: 280px;
+  background: black;
+  color: white;
+  font-size: 2.7rem;
+  text-align: center;
+  margin: 40px auto;
+  transform: rotate(25deg);
+  padding: 5px;
+}
+
+.greetingsModal {
+  position: absolute;
+  border: 1px solid black;
+  width: 20%;
+  height: 150px;
+  left: 15%;
+  top: 20%
 }

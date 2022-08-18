@@ -1,7 +1,6 @@
 const React = require("react");
 const Layout = require("../Layout");
 const Lishka = require("./Lishka");
-const Main = require("./Main");
 const Paymant = require("./Paymant");
 
 module.exports = function CartList({ sockList, findUser }) {
