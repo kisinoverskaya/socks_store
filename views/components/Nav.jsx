@@ -23,7 +23,6 @@ const Nav = ({ findUser }) => {
             Войти
           </a>
         )}
-        {console.log(findUser)}
       </nav>
       <div className="registration">
         <Registration />

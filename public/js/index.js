@@ -3,6 +3,7 @@ document.querySelectorAll(".wraper").forEach((el) => {
     const sockSrc = document.querySelector(".sock-uzor-src");
     const sockImg = document.querySelector(".sock-img");
     const srcItemBlock = document.querySelector(".src-item-block");
+    const sockTitle = document.querySelector(".sock-title");
     if (e.target.className === "color-item") {
       sockImg.style.backgroundColor = e.target.dataset.color;
     }
@@ -19,7 +20,7 @@ document.querySelectorAll(".wraper").forEach((el) => {
       const response = await fetch("/gen", {
         method: "post",
         body: JSON.stringify({
-          title: "test",
+          title: sockTitle.value ? sockTitle.value : "Стандартный красный",
           color: sockImg.style.backgroundColor,
           src: "src1",
           price: "500",
