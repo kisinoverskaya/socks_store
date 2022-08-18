@@ -4,6 +4,7 @@
   margin: 20px auto;
   position: relative;
   box-shadow: 2px 3px 16px gray;
+  border-radius: 10px;
 }
 
 .sock {
@@ -70,16 +71,19 @@
   display: none;
 }
 
-.heart,
-.red {
+.heart {
   cursor: pointer;
   width: 30px;
   height: 30px;
-  background: black;
+  background: red;
   position: absolute;
-  left: 25px;
-  top: 25px;
-  transform: rotate(45deg);
+  left: 15px;
+  top: 55px;
+  transform: rotate(45deg) scale(0.8);
+}
+
+.heart:hover {
+  transform: rotate(45deg) scale(0.7)
 }
 
 .heart::after,
@@ -108,24 +112,25 @@
   top: 0px;
 }
 
-.red {
-  background: white;
-  transform: scale(0.95) rotate(45deg);
-}
-
-.like {
-  background: red;
-}
-
 .wrapper-title {
   text-align: center;
 }
 
 .btn-buy {
+  cursor: pointer;
   width: 100%;
   position: absolute;
   top: 350px;
   height: 50px;
+  left: 0px;
+  background: rgb(22, 22, 22);
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.btn-buy:hover {
+  background: rgb(54, 54, 54);
 }
 
 .wrapper-desscription {
@@ -133,7 +138,6 @@
   left: 190px;
   width: 200px;
   height: 290px;
-  border: 1px solid black;
 }
 
 .wrapper-description-colors {
@@ -153,6 +157,13 @@
   width: 35px;
   height: 40px;
   background: navy;
+}
+
+.sock-price {
+  position: absolute;
+  font-size: 3rem;
+  top: 260px;
+  left: 245px;
 }
 
 .color-item:nth-child(2) {

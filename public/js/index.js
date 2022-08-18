@@ -79,6 +79,9 @@ reg.addEventListener("submit", async (e) => {
 login.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  // const register = document.querySelector(".register");
+  // const login = document.querySelector(".login");
+
   const url = e.target.action;
 
   const response = await fetch(url, {
@@ -97,4 +100,5 @@ login.addEventListener("submit", async (e) => {
 
   const data = await response.json();
   location.reload();
+  console.log(data);
 });

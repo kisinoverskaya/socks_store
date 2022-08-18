@@ -4,7 +4,6 @@ const SocksGenerator = () => {
   return (
     <div className="wraper">
       <div className="heart"></div>
-      <div className="heart red"></div>
       <input
         type="text"
         className="sock-title"
@@ -44,7 +43,7 @@ const SocksGenerator = () => {
         </div>
         <div className="wrapper-uzor-description"></div>
       </div>
-      <h3>500</h3>
+      <div className="sock-price">500</div>
       <button className="btn-buy">Купить</button>
     </div>
   );

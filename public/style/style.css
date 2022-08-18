@@ -107,10 +107,11 @@ li {
   margin: 5px;
   list-style: none;
   position: relative;
+  display: flex;
 }
 
 .destroy {
-  position: absolute;
+  /* position: absolute; */
   cursor: pointer;
   display: inline-block;
   width: 30px;
@@ -120,8 +121,8 @@ li {
   text-align: center;
   vertical-align: middle;
   line-height: 30px;
-  left: 97%;
-  top: 15%;
+  /* left: 97%;
+  top: 15%; */
 }
 
 .destroy:hover {
@@ -153,6 +154,13 @@ li {
   z-index: 0;
 }
 
+.sock-title {
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: white;
+  outline: none;
+}
+
 .modal-pay {
   width: 50%;
   height: 500px;
@@ -170,6 +178,7 @@ li {
 
 .counter {
   border: 1px solid black;
+  width: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
