@@ -9,6 +9,16 @@ deleteRouter.delete("/:id", async (req, res) => {
         id: Number(req.params.id),
       },
     });
+
+    const finder = await Basket.findAll({
+      raw: true,
+      where: {
+        id: req.session.findUser.id,
+      },
+    });
+    res.json({
+      finder,
+    });
   } catch (error) {
     res.json({
       message: "Не вышло дружок",

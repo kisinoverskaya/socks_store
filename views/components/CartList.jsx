@@ -2,11 +2,14 @@ const React = require("react");
 const Layout = require("../Layout");
 const Lishka = require("./Lishka");
 const Main = require("./Main");
+const Paymant = require("./Paymant");
 
 module.exports = function CartList({ sockList, findUser }) {
   return (
     <Layout>
       <div className="basket">
+        {/* тут модалка с оплатой */}
+        <Paymant />
         <h1>{findUser.name} вы выбрали:</h1>
         <div className="order-block">
           <ul className="socksList">
@@ -15,14 +18,18 @@ module.exports = function CartList({ sockList, findUser }) {
             ))}
           </ul>
         </div>
-        <h2>
-          Итого:{" "}
-          <span className="price">
-            {sockList.reduce((acc, el) => {
-              return acc + el.price;
-            }, 0)}
-          </span>
-        </h2>
+        <div className="price-buy">
+          <h2>
+            Итого:
+            <span className="price">
+              {/* тут лишки */}
+              {sockList.reduce((acc, el) => {
+                return acc + el.price;
+              }, 0)}
+            </span>
+          </h2>
+          <button className="btnBuy">Перейти к оплате</button>
+        </div>
         <script defer src="/js/basket.js"></script>
       </div>
     </Layout>
