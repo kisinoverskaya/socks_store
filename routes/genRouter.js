@@ -13,6 +13,7 @@ genRouter.post("/", async (req, res) => {
       src,
       price,
       userId: req.session.findUser.id,
+      favorite: false,
     });
   } catch (error) {
     res.json({
