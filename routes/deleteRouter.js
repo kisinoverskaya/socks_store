@@ -1,9 +1,19 @@
 const deleteRouter = require("express").Router();
 
-const { Sock } = require("../db/models");
+const { Basket } = require("../db/models");
 
-// deleteRouter.delete("/delete", async (req, res) => {
-//   const find = await Sock.findOne();
-// });
+deleteRouter.delete("/:id", async (req, res) => {
+  try {
+    const res = await Basket.destroy({
+      where: {
+        id: Number(req.params.id),
+      },
+    });
+  } catch (error) {
+    res.json({
+      message: "Не вышло дружок",
+    });
+  }
+});
 
 module.exports = deleteRouter;
