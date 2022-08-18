@@ -42,6 +42,7 @@ app.use("/auth", authRouter);
 app.use("/cart", cartRouter);
 app.use("/gen", genRouter);
 app.use("/cart/delete", deleteRouter);
+app.use('/favorites', favRouter);
 // app.use("/logout", logoutRouter);
 
 app.listen(PORT, (req, res) => {

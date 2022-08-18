@@ -12,7 +12,7 @@ const Nav = ({ findUser }) => {
      <nav>
      <a href="/">Главная</a>
       <a href="/cart/items">Корзина</a>
-      <a href="/">Избранное</a>
+      <a href="/favorites">Избранное</a>
       <a href="/auth">Выйти</a>
       </nav>
       </div>
