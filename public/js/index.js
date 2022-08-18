@@ -64,9 +64,13 @@ reg.addEventListener("submit", async (e) => {
     }),
     headers: { "Content-Type": "application/json" },
   });
+
   const myRes = await response.json();
+  console.log("lox");
   if (myRes.message === "Создан новый чел") {
     window.location.href = "/";
+  } else {
+    console.log(myRes.message);
   }
 });
 
