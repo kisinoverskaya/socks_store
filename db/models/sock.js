@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     color: DataTypes.TEXT,
     src: DataTypes.TEXT,
     price: DataTypes.INTEGER,
-    
+    userId: DataTypes.INTEGER,
+
   }, {
     sequelize,
     modelName: 'CartList',
