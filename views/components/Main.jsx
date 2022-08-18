@@ -4,9 +4,9 @@ const Login = require("./Login");
 const Registration = require("./Registration");
 const SocksGenerator = require("./SocksGenerator");
 
-const Main = () => {
+const Main = ({ findUser }) => {
   return (
-    <Layout>
+    <Layout findUser={findUser}>
       <SocksGenerator />
     </Layout>
   );

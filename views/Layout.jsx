@@ -1,7 +1,7 @@
 const React = require("react");
 const Nav = require("./components/Nav");
 
-const Layout = ({ children }) => {
+const Layout = ({ findUser, children }) => {
   return (
     <html lang="en">
       <head>
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         <script defer src="/js/index.js"></script>
       </head>
       <body>
-        <Nav />
+        <Nav findUser={findUser} />
         {children}
         <hr />
       </body>

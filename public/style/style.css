@@ -91,16 +91,37 @@ input {
 }
 
 .order-block {
-  border: 1px solid black;
   width: 90%;
-  height: 400px;
   margin: 0 auto;
   display: flex;
 }
 
-.left-block,
-.right-block {
-  width: 50%;
+.socksList {
+  width: 90%;
+  margin: 0 auto;
+}
+
+li {
   border: 1px solid black;
-  height: 100%;
+  padding: 10px;
+  margin: 5px;
+  list-style: none;
+}
+
+.destroy {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  float: right;
+}
+
+.destroy:hover {
+  transform: scale(0.8);
 }

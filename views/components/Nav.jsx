@@ -5,7 +5,7 @@ const Registration = require("./Registration");
 const Nav = ({ findUser }) => {
   return (
     <header>
-      <h1>socks store</h1>
+      <h1>socks shop</h1>
       {findUser && <h2>Привет {findUser.name}</h2>}
       <nav>
         <a href="/">Главная</a>
@@ -23,6 +23,7 @@ const Nav = ({ findUser }) => {
             Войти
           </a>
         )}
+        {console.log(findUser)}
       </nav>
       <div className="registration">
         <Registration />
