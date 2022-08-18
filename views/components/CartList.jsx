@@ -1,5 +1,6 @@
 const React = require("react");
 const Layout = require("../Layout");
+const Lishka = require("./Lishka");
 const Main = require("./Main");
 
 module.exports = function CartList({ sockList, findUser }) {
@@ -10,9 +11,7 @@ module.exports = function CartList({ sockList, findUser }) {
         <div className="order-block">
           <ul className="socksList">
             {sockList.map((el) => (
-              <li data-id={el.id}>
-                {el.color} <span className="destroy">X</span>{" "}
-              </li>
+              <Lishka el={el} />
             ))}
           </ul>
         </div>
