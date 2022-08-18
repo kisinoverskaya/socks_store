@@ -18,6 +18,7 @@ authRouter.post("/login", async (req, res) => {
         req.session.findUser = {
           email: findUser.email,
           name: findUser.name,
+          id: findUser.id,
         };
 
         res.json({

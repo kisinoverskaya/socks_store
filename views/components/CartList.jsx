@@ -16,6 +16,7 @@ module.exports = function CartList({ sockList, findUser }) {
             ))}
           </ul>
         </div>
+        <h2>Итого: {sockList.length * 500}</h2>
         <script defer src="/js/basket.js"></script>
       </div>
     </Layout>

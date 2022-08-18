@@ -1,12 +1,19 @@
 const genRouter = require("express").Router();
 
-const { Sock } = require("../db/models");
+const { Basket } = require("../db/models");
 
 genRouter.post("/", async (req, res) => {
+  console.log(req.session.findUser.id);
   try {
     const { title, color, src, price } = req.body;
-    const newSock = await Sock.create(req.body);
-    console.log(newSock);
+
+    const newSock = await Basket.create({
+      title,
+      color,
+      src,
+      price,
+      userId: req.session.findUser.id,
+    });
   } catch (error) {
     res.json({
       message: "Не получилось создать носок",
