@@ -26,7 +26,7 @@ indexRouter.post("/", async (req, res) => {
       });
       console.log("ya tut");
       console.log("tut user", newUser);
-      req.session.findUser = { name, email, id };
+      req.session.findUser = { name, email, id:newUser.id };
       res.json({
         message: "Создан новый чел",
       });

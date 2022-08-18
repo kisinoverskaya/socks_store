@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node App.js",
-    "dev": "nodemon App.js --ext js,jsx,json --ignore sessions",
+    "dev": "nodemon App.js --ext js,jsx --ignore sessions",
     "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
