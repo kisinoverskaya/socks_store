@@ -6,10 +6,11 @@ const morgan = require("morgan");
 const indexRouter = require("./routes/indexRouter");
 const ssr = require("./middleware/ssr");
 const authRouter = require("./routes/authRouter");
-const cartRouter = require('./routes/cartRouter');
+const cartRouter = require("./routes/cartRouter");
 const session = require("express-session");
 
 const logoutRouter = require("./routes/logoutRouter");
+const genRouter = require("./routes/genRouter");
 const FileStore = require("session-file-store")(session);
 
 const PORT = 3000;
@@ -38,6 +39,7 @@ app.use(express.json());
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
 app.use("/cart", cartRouter);
+app.use("/gen", genRouter);
 // app.use("/logout", logoutRouter);
 
 app.listen(PORT, (req, res) => {

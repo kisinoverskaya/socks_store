@@ -1,6 +1,6 @@
 const wraper = document.querySelector(".wraper");
 
-wraper.addEventListener("click", (e) => {
+wraper.addEventListener("click", async (e) => {
   // тут ищу src
   const sockSrc = document.querySelector(".sock-uzor-src");
   const sockImg = document.querySelector(".sock-img");
@@ -20,6 +20,19 @@ wraper.addEventListener("click", (e) => {
       color: sockImg.style.backgroundColor,
     });
     console.log(body);
+
+    const response = await fetch("/gen", {
+      method: "post",
+      body: JSON.stringify({
+        title: "test",
+        color: sockImg.style.backgroundColor,
+        src: "src1",
+        price: "500",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const data = await response.json();
   }
 });
 
