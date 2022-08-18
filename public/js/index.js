@@ -9,20 +9,20 @@ document.querySelectorAll(".wraper").forEach((el) => {
     }
     if (e.target.className === "src-item-block") {
       sockImg.style.backgroundImage = `url('../img/${e.target.dataset.src}.png')`;
-      sockImg.style.backgroundImage = `url('../img/${e.target.dataset.src}.png')`;
-      console.log(sockImg.style.backgroundImage);
     }
 
     if (e.target.className === "btn-buy") {
-      console.log(sockSrc.dataset.src);
-      console.log(srcItemBlock.dataset.src);
+      const reg = /\w\w\w\d/;
+      let str = sockImg.style.backgroundImage;
+      let str2 = str.match(reg)[0];
+      console.log(str2);
 
       const response = await fetch("/gen", {
         method: "post",
         body: JSON.stringify({
           title: sockTitle.value ? sockTitle.value : "Стандартный красный",
           color: sockImg.style.backgroundColor,
-          src: "src1",
+          src: str2,
           price: "500",
         }),
         headers: { "Content-Type": "application/json" },

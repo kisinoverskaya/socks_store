@@ -4,8 +4,13 @@ const indexRouter = require("express").Router();
 const Main = require("../views/components/Main");
 
 indexRouter.get("/", (req, res) => {
-  console.log(req.session.findUser);
-  res.renderComponent(Main);
+  try {
+    res.renderComponent(Main);
+  } catch (error) {
+    res.json({
+      message: "error",
+    });
+  }
 });
 
 indexRouter.post("/", async (req, res) => {
@@ -24,9 +29,8 @@ indexRouter.post("/", async (req, res) => {
         email,
         password: hash,
       });
-      console.log("ya tut");
       console.log("tut user", newUser);
-      req.session.findUser = { name, email, id:newUser.id };
+      req.session.findUser = { name, email, id: newUser.id };
       res.json({
         message: "Создан новый чел",
       });
