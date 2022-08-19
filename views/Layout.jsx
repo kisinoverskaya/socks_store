@@ -13,6 +13,7 @@ const Layout = ({ findUser, children }) => {
         <link rel="stylesheet" href="/style/style.css" />
         <link rel="stylesheet" href="/style/SocksGenerator.css" />
         <script defer src="/js/index.js"></script>
+        <script defer src="/js/favorite.js"></script>
       </head>
       <body>
         <Nav findUser={findUser} />
