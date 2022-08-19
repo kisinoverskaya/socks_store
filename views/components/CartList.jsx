@@ -5,7 +5,7 @@ const Paymant = require("./Paymant");
 
 module.exports = function CartList({ sockList, findUser }) {
   return (
-    <Layout>
+    <Layout findUser={findUser}>
       <div className="basket">
         {/* тут модалка с оплатой */}
         <Paymant />
