@@ -232,8 +232,6 @@ li {
 }
 
 .findArr {
-  /* border: 1px solid black;
-   */
   position: relative;
   width: 300px;
   height: 300px;
@@ -243,4 +241,9 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.wrapper-favorite {
+  border: 5px solid black;
+  width: 200px !important;
 }
