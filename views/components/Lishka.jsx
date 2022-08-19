@@ -23,9 +23,13 @@ const Lishka = ({ el }) => {
       </div>
       <div className="controls">
         <div className="counter">
-          <span className="minus">-</span>
-          <spam className="accumulator">{el.count}</spam>
-          <span className="plus">+</span>
+          <span data-id={el.id} className="minus">
+            -
+          </span>
+          <span className="accumulator">{el.count}</span>
+          <span data-id={el.id} className="plus">
+            +
+          </span>
         </div>
         <span className="destroy">X</span>
       </div>

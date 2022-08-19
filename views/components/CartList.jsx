@@ -24,7 +24,7 @@ module.exports = function CartList({ sockList, findUser }) {
               <span className="price">
                 {/* тут лишки */}
                 {sockList.reduce((acc, el) => {
-                  return acc + el.price;
+                  return acc + el.price * el.count;
                 }, 0)}
               </span>
             </h2>

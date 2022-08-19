@@ -9,10 +9,11 @@ const authRouter = require("./routes/authRouter");
 const cartRouter = require("./routes/cartRouter");
 const session = require("express-session");
 const deleteRouter = require("./routes/deleteRouter");
-const logoutRouter = require("./routes/logoutRouter");
 const genRouter = require("./routes/genRouter");
 const FileStore = require("session-file-store")(session);
-const favRouter = require('./routes/favRouter');
+const favRouter = require("./routes/favRouter");
+const updateBasketRouter = require("./routes/updateBasketRouter");
+const deleteBasketRouter = require("./routes/deleteBasketRouter");
 
 const PORT = 3000;
 const app = express();
@@ -42,8 +43,9 @@ app.use("/auth", authRouter);
 app.use("/cart", cartRouter);
 app.use("/gen", genRouter);
 app.use("/cart/delete", deleteRouter);
-app.use('/favorites', favRouter);
-// app.use("/logout", logoutRouter);
+app.use("/favorites", favRouter);
+app.use("/cart", updateBasketRouter);
+app.use("/cart", deleteBasketRouter);
 
 app.listen(PORT, (req, res) => {
   console.log(chalk.bgCyan(` Server has been start on port: ${PORT} `));

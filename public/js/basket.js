@@ -6,12 +6,6 @@ document.querySelectorAll(".socksList").forEach((el) => {
     const plus = document.querySelectorAll(".plus");
     const minus = document.querySelectorAll(".minus");
 
-    if (e.target.className === "plus") {
-      let value =
-        e.target.closest("li").childNodes[3].childNodes[1].textContent;
-      value = "2";
-    }
-
     if (e.target.className === "destroy") {
       const li = e.target.closest("li");
       const id = li.dataset.id;
@@ -27,21 +21,43 @@ document.querySelectorAll(".socksList").forEach((el) => {
       console.log(data);
     }
 
-    // if (e.target === "plus") {
-    //   const li = e.target.closest("li");
-    //   const id = li.dataset.id;
-    //   const accumulator = document.querySelector(".accumulator");
+    if (e.target.className === "plus") {
+      const li = e.target.closest("li");
+      const id = li.dataset.id;
+      const url = `/cart/${e.target.dataset.id}`;
+      const response = await fetch(url, {
+        method: "PUT",
+        body: JSON.stringify({
+          count: Number(
+            li.childNodes[1].childNodes[0].childNodes[1].textContent
+          ),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    //   const url = "/";
+      const data = await response.json();
+      console.log(data.message);
+      li.childNodes[1].childNodes[0].childNodes[1].textContent = data.message;
+    }
 
-    //   const response = await fetch(url, {
-    //     method: put,
-    //     body: JSON.stringify({
-    //       count: accumulator.textContent,
-    //     }),
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    // }
+    if (e.target.className === "minus") {
+      const li = e.target.closest("li");
+      const id = li.dataset.id;
+      const url = `/cart/${e.target.dataset.id}`;
+      const response = await fetch(url, {
+        method: "DELETE",
+        body: JSON.stringify({
+          count: Number(
+            li.childNodes[1].childNodes[0].childNodes[1].textContent
+          ),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await response.json();
+      console.log(data.message);
+      li.childNodes[1].childNodes[0].childNodes[1].textContent = data.message;
+    }
   });
 });
 
