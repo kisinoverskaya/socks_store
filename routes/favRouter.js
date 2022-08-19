@@ -4,7 +4,7 @@ const {Favorite} = require('../db/models');
 const TrueList = require('../views/components/TrueList')
 
 favRouter.get('/', async (req, res) => {
-  const favArr = await Favorite.findAll({raw: true});
+  const favArr = await Favorite.findAll({raw: true, where:{userId:req.session.findUser.id}});
   res.renderComponent(FavoritesList, { favArr });
 })
 
