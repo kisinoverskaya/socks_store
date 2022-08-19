@@ -1,4 +1,5 @@
 const React = require("react");
+const Footer = require("./components/Footer");
 const Nav = require("./components/Nav");
 
 const Layout = ({ findUser, children }) => {
@@ -17,6 +18,7 @@ const Layout = ({ findUser, children }) => {
         <Nav findUser={findUser} />
         {children}
         <hr />
+        <Footer />
       </body>
     </html>
   );
