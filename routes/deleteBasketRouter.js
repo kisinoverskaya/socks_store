@@ -24,9 +24,13 @@ deleteBasketRouter.delete("/:id", async (req, res) => {
       },
     });
 
-    console.log(find);
+    const result = await Basket.findAll({
+      raw: true,
+    });
+
     res.json({
       message: find.count,
+      allMesage: result,
     });
 
     console.table(find);

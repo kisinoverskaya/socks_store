@@ -22,8 +22,13 @@ updateBasketRouter.put("/:id", async (req, res) => {
       },
     });
 
+    const result = await Basket.findAll({
+      raw: true,
+    });
+
     res.json({
       message: find.count,
+      allMesage: result,
     });
 
     console.table(find);

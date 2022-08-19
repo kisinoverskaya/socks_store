@@ -40,10 +40,15 @@ const SocksGenerator = () => {
           <span data-src="src8" className="src-item-block"></span>
           <span data-src="src9" className="src-item-block"></span>
           <span data-src="src10" className="src-item-block"></span>
+          <span data-src="src11" className="src-item-block"></span>
+          <span data-src="src12" className="src-item-block"></span>
+          <span data-src="src13" className="src-item-block"></span>
+          <span data-src="src14" className="src-item-block"></span>
+          <span data-src="src15" className="src-item-block"></span>
         </div>
         <div className="wrapper-uzor-description"></div>
       </div>
-      <div className="sock-price">500</div>
+      <div className="sock-price">500 ₽</div>
       <button className="btn-buy">Купить</button>
     </div>
   );

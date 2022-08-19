@@ -9,7 +9,7 @@ module.exports = function CartList({ sockList, findUser }) {
       <div className="basket">
         {/* тут модалка с оплатой */}
         <Paymant />
-        <h1>{findUser.name} вы выбрали:</h1>
+        <h1 className="userChange">{findUser.name}, вы выбрали:</h1>
         <div className="order-block">
           <ul className="socksList">
             {sockList.map((el) => (

@@ -8,7 +8,7 @@ const Nav = ({ findUser }) => {
       <h1>socks shop</h1>
       {findUser ? (
         <div>
-          <h2>Привет {findUser.name}</h2>
+          <h2 className="greetUser">Добро пожаловать, {findUser.name}</h2>
           <nav>
             <a href="/">Главная</a>
             <a href="/cart/items">Корзина</a>

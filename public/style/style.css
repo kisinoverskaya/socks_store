@@ -26,7 +26,7 @@ header {
 }
 
 h1 {
-  font: normal 4em 'Playfair Display SC', serif;
+  font: normal 5em 'Playfair Display SC', serif;
   text-align: center;
 }
 
@@ -284,7 +284,41 @@ li {
 }
 
 .icon {
-  width: 64px;
-  height: 64px;
-  border: 1px solid white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.4);
+}
+
+.icon1 {
+  background-image: url('https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-256.png');
+  background-size: contain;
+}
+
+.icon2 {
+  background-image: url('https://cdn3.iconfinder.com/data/icons/social-icons-33/512/Telegram-256.png');
+  background-size: contain;
+}
+
+.icon3 {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-256.png');
+  background-size: contain;
+}
+
+.icon4 {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-256.png');
+  background-size: contain;
+}
+
+.greetUser {
+  text-align: center;
+  font: normal 2em 'Playfair Display SC', serif;
+}
+
+.userChange {
+  font-size: 2em;
 }
