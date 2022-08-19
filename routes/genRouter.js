@@ -3,7 +3,6 @@ const genRouter = require("express").Router();
 const { Basket } = require("../db/models");
 
 genRouter.post("/", async (req, res) => {
-  console.log(req.session.findUser.id);
   try {
     const { title, color, src, price } = req.body;
 

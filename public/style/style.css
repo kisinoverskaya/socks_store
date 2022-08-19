@@ -175,14 +175,14 @@ li {
 
 .counter {
   border: 1px solid black;
-  width: 100px;
+  width: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  column-gap: 15px;
   align-items: center;
 }
 
 .accumulator {
-  width: 5%;
   text-align: center;
 }
 
@@ -251,4 +251,40 @@ li {
 .favoriteTitle {
   font-size: 20px;
   text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.footer-content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content-text {
+  /* border: 1px solid white; */
+  width: 20%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.footer-content-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+  column-gap: 30px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid white;
 }
