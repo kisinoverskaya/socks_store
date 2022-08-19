@@ -7,4 +7,20 @@ favRouter.get('/', async (req, res) => {
   res.renderComponent(FavoritesList, { favArr });
 })
 
+favRouter.post('/',async (req, res) =>{
+  try {
+    const { title, color, src } = req.body;
+
+    const newSock = await Favorite.create({
+      title,
+      color,
+      src,
+      userId: req.session.findUser.id,
+    });
+  } catch (error) {
+    res.json({
+      message: "Не получилось создать носок",
+    });
+  }
+} )
 module.exports = favRouter;

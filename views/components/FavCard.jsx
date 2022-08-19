@@ -2,7 +2,7 @@ const React = require("react");
 
 module.exports = function FavCard({ likedCard }) {
   return (
-    <div className="wraper wrapper-favorite">
+    <div id={likedCard.id} className="wraper wrapper-favorite">
       <div className="heart"></div>
       <h3 className="favoriteTitle">{likedCard.title}</h3>
       <div className="sock">
