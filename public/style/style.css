@@ -262,3 +262,29 @@ li {
   color: white;
   text-align: center;
 }
+
+.footer-content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content-text {
+  /* border: 1px solid white; */
+  width: 20%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.footer-content-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+  column-gap: 30px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid white;
+}
