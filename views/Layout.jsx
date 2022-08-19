@@ -18,7 +18,6 @@ const Layout = ({ findUser, children }) => {
       <body>
         <Nav findUser={findUser} />
         {children}
-        <hr />
         <Footer />
       </body>
     </html>

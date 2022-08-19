@@ -12,7 +12,8 @@ document.querySelectorAll(".wraper").forEach((el) => {
     }
 
     if (e.target.className === "btn-buy") {
-      const reg = /\w\w\w\d/;
+      // const reg = /\w\w\w\d/;
+      const reg = /\w{3}\d+/g;
       let str = sockImg.style.backgroundImage;
       let str2 = str.match(reg)[0];
       console.log(str2);
@@ -20,7 +21,7 @@ document.querySelectorAll(".wraper").forEach((el) => {
       const response = await fetch("/gen", {
         method: "post",
         body: JSON.stringify({
-          title: sockTitle.value ? sockTitle.value : "Стандартный красный",
+          title: sockTitle.value ? sockTitle.value : "Классические",
           color: sockImg.style.backgroundColor,
           src: str2,
           price: "500",

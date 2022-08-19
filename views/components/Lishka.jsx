@@ -6,20 +6,38 @@ const Lishka = ({ el }) => {
     src2: "бэтмен",
     src3: "хагги-ваги",
     src4: "монстер энержи",
-    src5: "D&G",
+    src5: "искусство",
     src6: "котейка девочка",
     src7: "радуга",
     src8: "цветочная поляна",
-    src9: "вьюга",
-    src10: "деньгопад",
+    src9: "ждун",
+    src10: "зебра",
+    src11: "древний бог",
+    src12: "долматинец",
+    src13: "кит",
+    src14: "парень в маске",
+    src15: "кораблик",
   };
 
-  const colors = {};
+  const colors = {
+    navy: "темно-синего",
+    green: "зеленоватого",
+    yellow: "ярко-желтого",
+    pink: "розового",
+    gray: "сероватого",
+    tomato: "томатного",
+    yellowgreen: "салатного",
+    violet: "фиолетового",
+    teal: "изумрудного",
+    royalblue: "лазурного",
+  };
 
   return (
     <li data-id={el.id}>
       <div>
-        <b>{el.title}</b>, цвет {el.color}, с картинкой <b>{picture[el.src]}</b>
+        Носки <b>{el.title}</b>,{" "}
+        <b style={{ color: el.color }}>{colors[el.color]}</b> цвета, с картинкой{" "}
+        <b>{picture[el.src]}</b>
       </div>
       <div className="controls">
         <div className="counter">

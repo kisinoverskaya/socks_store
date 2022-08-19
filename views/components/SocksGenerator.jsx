@@ -2,7 +2,7 @@ const React = require("react");
 
 const SocksGenerator = () => {
   return (
-    <div className="wraper">
+    <div className="wraper" id="wrap">
       <div className="heart heart-del"></div>
       <input
         type="text"
