@@ -34,4 +34,28 @@ document.querySelectorAll(".wraper").forEach((el) => {
   });
 
 
-//   (e.target.className === "heart") 
+ const delFav =  document.querySelector('.gallery');
+ if (delFav) {
+    delFav.addEventListener('click', async (event) => {
+      if (event.target.classList.contains('del-heart')) {
+
+            const di = event.target.parentNode;
+            const id = di.dataset.id; 
+            const response = await fetch(`/favorites/${id}`, {
+              method: 'delete',
+            });
+            const data = await response.json();
+            if(data.text === 'Ok!'){
+
+            const response = await fetch('/favorites/update')
+            const html = await response.text()
+            delFav.remove(); 
+            document.getElementsByTagName('header')[0].insertAdjacentHTML('afterend', html);
+              
+              console.log(data.text);
+            } else {
+                console.log(data.text);
+            }
+        }
+    })
+ }
