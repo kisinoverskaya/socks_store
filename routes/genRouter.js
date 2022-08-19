@@ -12,6 +12,7 @@ genRouter.post("/", async (req, res) => {
       color,
       src,
       price,
+      count: 1,
       userId: req.session.findUser.id,
       favorite: false,
     });
