@@ -245,5 +245,10 @@ li {
 
 .wrapper-favorite {
   border: 5px solid black;
-  width: 200px !important;
+  width: 220px !important;
+}
+
+.favoriteTitle {
+  font-size: 20px;
+  text-align: center;
 }

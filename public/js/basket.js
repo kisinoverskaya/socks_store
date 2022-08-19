@@ -26,6 +26,22 @@ document.querySelectorAll(".socksList").forEach((el) => {
       const data = await responce.json();
       console.log(data);
     }
+
+    // if (e.target === "plus") {
+    //   const li = e.target.closest("li");
+    //   const id = li.dataset.id;
+    //   const accumulator = document.querySelector(".accumulator");
+
+    //   const url = "/";
+
+    //   const response = await fetch(url, {
+    //     method: put,
+    //     body: JSON.stringify({
+    //       count: accumulator.textContent,
+    //     }),
+    //     headers: { "Content-Type": "application/json" },
+    //   });
+    // }
   });
 });
 

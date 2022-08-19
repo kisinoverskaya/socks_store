@@ -24,7 +24,7 @@ const Lishka = ({ el }) => {
       <div className="controls">
         <div className="counter">
           <span className="minus">-</span>
-          <spam className="accumulator">1</spam>
+          <spam className="accumulator">{el.count}</spam>
           <span className="plus">+</span>
         </div>
         <span className="destroy">X</span>
