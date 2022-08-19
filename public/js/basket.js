@@ -38,6 +38,13 @@ document.querySelectorAll(".socksList").forEach((el) => {
       const data = await response.json();
       console.log(data.message);
       li.childNodes[1].childNodes[0].childNodes[1].textContent = data.message;
+
+      const price = data.allMesage.reduce((acc, el) => {
+        return acc + el.price * el.count;
+      }, 0);
+
+      const spanprice = document.querySelector(".price");
+      spanprice.textContent = price;
     }
 
     if (e.target.className === "minus") {
@@ -57,6 +64,13 @@ document.querySelectorAll(".socksList").forEach((el) => {
       const data = await response.json();
       console.log(data.message);
       li.childNodes[1].childNodes[0].childNodes[1].textContent = data.message;
+
+      const price = data.allMesage.reduce((acc, el) => {
+        return acc + el.price * el.count;
+      }, 0);
+
+      const spanprice = document.querySelector(".price");
+      spanprice.textContent = price;
     }
   });
 });

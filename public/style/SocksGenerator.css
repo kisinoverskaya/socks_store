@@ -162,8 +162,8 @@
 .sock-price {
   position: absolute;
   font-size: 3rem;
-  top: 260px;
-  left: 245px;
+  top: 280px;
+  left: 235px;
 }
 
 .color-item:nth-child(2) {
@@ -216,6 +216,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  gap: 1px;
 }
 
 .src-item-block {

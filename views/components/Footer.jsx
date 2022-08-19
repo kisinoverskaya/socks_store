@@ -11,9 +11,10 @@ const Footer = () => {
           <h5>Jays 2022</h5>
         </div>
         <div className="footer-content-icons">
-          <div className="icon 1"></div>
-          <div className="icon 2"></div>
-          <div className="icon 3"></div>
+          <div className="icon icon1"></div>
+          <div className="icon icon2"></div>
+          <div className="icon icon3"></div>
+          <div className="icon icon4"></div>
         </div>
       </div>
     </div>
