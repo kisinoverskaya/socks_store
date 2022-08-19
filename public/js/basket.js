@@ -75,21 +75,15 @@ document.querySelectorAll(".socksList").forEach((el) => {
   });
 });
 
-const btnBuy = document.querySelector(".btnBuy");
-btnBuy.addEventListener("click", async () => {
-  const modalPay = document.querySelector(".modal-pay");
-  console.log(modalPay);
-  modalPay.classList.toggle("visible-pay");
-
-  const url = "mailto:vadimir29@gmail.com";
-
-  const response = await fetch(url, {
-    method: "post",
-    body: JSON.stringify({
-      text: "привет",
-    }),
-    headers: { "Content-Type": "application/json" },
+const btnBuy = document.querySelectorAll(".btnBuy").forEach((el) => {
+  el.addEventListener("click", async () => {
+    const modalPay = document.querySelector(".modal-pay");
+    modalPay.classList.toggle("visible-pay");
   });
+});
 
-  const data = await response.json();
+const buybuy = document.querySelectorAll(".buybuy").forEach((el) => {
+  el.addEventListener("click", () => {
+    alert("Спасибо, что выбрали наши носки");
+  });
 });

@@ -20,7 +20,7 @@ document.querySelectorAll(".wraper").forEach((el) => {
       const response = await fetch("/favorites", {
         method: "post",
         body: JSON.stringify({
-          title: sockTitle.value ? sockTitle.value : "Стандартный красный",
+          title: sockTitle.value ? sockTitle.value : "Классические",
           color: sockImg.style.backgroundColor,
           src: str2,
           price: "500",
